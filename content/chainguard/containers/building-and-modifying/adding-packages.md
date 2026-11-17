@@ -4,7 +4,7 @@ linktitle: "Add a package"
 description: "Choose how to add a package to a Chainguard Container, find the package name, apply the change, and confirm the package reached the finished image."
 type: "article"
 date: 2026-09-09T00:00:00+00:00
-lastmod: 2026-10-13T14:42:18+00:00
+lastmod: 2026-11-17T20:45:03+00:00
 draft: false
 tags: ["Chainguard Containers", "Custom Assembly", "Procedural"]
 images: []
@@ -40,7 +40,7 @@ Custom Assembly is available to organizations with access to [production Chaingu
 The Custom Assembly approaches on this page share these prerequisites:
 
 * Access to production Chainguard Containers.
-* A role with the `repo.update` capability, to customize an existing image in place, or the `repo.create` capability, to save the result as a new image. Of Chainguard's three default roles — `viewer`, `editor`, and `owner` — only `owner` has both. For a custom role you can create instead, see [Custom Assembly permissions requirements](/chainguard/containers/custom-assembly/overview/#custom-assembly-permissions-requirements).
+* A role with the `repo.update` capability, to customize an existing image in place, or the `repo.create` capability, to save the result as a new image. Of Chainguard's three default roles, `editor` and `owner` have both, and `viewer` has neither. For a custom role you can create instead, see [Custom Assembly permissions requirements](/chainguard/containers/custom-assembly/overview/#custom-assembly-permissions-requirements).
 * For the `chainctl` approaches, [`chainctl` installed](/platform/chainctl-usage/how-to-install-chainctl/) and [authenticated](/platform/chainctl-usage/authentication-options/).
 
 Custom Assembly adds packages to an image; it can't remove the packages the source image already contains. You can, however, remove packages you added in an earlier build.

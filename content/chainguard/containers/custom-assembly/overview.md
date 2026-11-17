@@ -10,7 +10,7 @@ aliases:
 type: "article"
 description: "How to use Chainguard's Custom Assembly tool"
 date: 2025-02-19T11:07:52+02:00
-lastmod: 2026-10-21T18:42:36+00:00
+lastmod: 2026-11-17T20:45:03+00:00
 draft: false
 tags: ["Chainguard Containers", "Custom Assembly"]
 images: []
@@ -85,9 +85,9 @@ Custom Assembly is the officially supported method for extending Chainguard Cont
 
 In order to build customized container images, you must have the appropriate permissions in relation to your Chainguard organization. Specifically, a Chainguard user must have a role with the `repo.update` capability to customize an existing image repository in place, and must have the `repo.create` capability to create a net new image repository with the `--save-as` feature. If you find yourself unable to customize container images with Custom Assembly, it may be that you don't have adequate permissions within your organization to do so.
 
-As of this writing, only one of Chainguard's three main default roles (`viewer`, `editor`, and `owner`) has these capabilities: the `owner` role.
+Two of Chainguard's three main default roles have these capabilities: `editor` and `owner`. The `viewer` role has neither. For each role's capabilities, see the [Built-in roles and capabilities reference](/platform/administration/iam-organizations/roles-role-bindings/capabilities-reference/).
 
-This means that in order to use Custom Assembly (including `--save-as`), your account must be bound to the `owner` role, or to a custom role that also has the `repo.update` and `repo.create` capabilities.
+To use Custom Assembly, including `--save-as`, you need the `editor` or `owner` role, or a custom role that has the `repo.update` and `repo.create` capabilities.
 
 To create such a custom role, you can use the `chainctl iam roles create` command. The following example creates a custom role named `ca-role` with all the same capabilities as the `viewer` role, but with the added `repo.update` and `repo.create` capabilities:
 
